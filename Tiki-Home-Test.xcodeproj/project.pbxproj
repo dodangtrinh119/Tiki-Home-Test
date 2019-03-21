@@ -26,10 +26,10 @@
 		4A7305F42243A97800BEAB51 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F32243A97800BEAB51 /* String+Extension.swift */; };
 		4A7305F62243AD5100BEAB51 /* HotProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F52243AD5100BEAB51 /* HotProductsViewModel.swift */; };
 		4A7305F82243ADA400BEAB51 /* HotProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */; };
-		4A7305FA2243AFA600BEAB51 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A7305F92243AFA600BEAB51 /* products.json */; };
 		4A7306372243E7CB00BEAB51 /* UIPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7306362243E7CB00BEAB51 /* UIPaddedLabel.swift */; };
 		4A7306392243F85600BEAB51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7306382243F85600BEAB51 /* Constants.swift */; };
 		4A73063B2243F9D300BEAB51 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73063A2243F9D300BEAB51 /* UIColor+Extension.swift */; };
+		4AB99FFB22442B25008FD910 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB99FFA22442B25008FD910 /* LoadingView.swift */; };
 		4AD64B8A224398BB00380C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD64B89224398BB00380C23 /* AppDelegate.swift */; };
 		4AD64B8F224398BB00380C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B8D224398BB00380C23 /* Main.storyboard */; };
 		4AD64B91224398BC00380C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B90224398BC00380C23 /* Assets.xcassets */; };
@@ -77,10 +77,10 @@
 		4A7305F32243A97800BEAB51 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		4A7305F52243AD5100BEAB51 /* HotProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductsViewModel.swift; sourceTree = "<group>"; };
 		4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductsViewController.swift; sourceTree = "<group>"; };
-		4A7305F92243AFA600BEAB51 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		4A7306362243E7CB00BEAB51 /* UIPaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddedLabel.swift; sourceTree = "<group>"; };
 		4A7306382243F85600BEAB51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4A73063A2243F9D300BEAB51 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		4AB99FFA22442B25008FD910 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4AD64B86224398BB00380C23 /* Tiki-Home-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiki-Home-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD64B89224398BB00380C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AD64B8E224398BB00380C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -230,7 +230,6 @@
 		4A7305E12243A0B000BEAB51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4A7305F92243AFA600BEAB51 /* products.json */,
 				4AD64B90224398BC00380C23 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -301,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				4A7306362243E7CB00BEAB51 /* UIPaddedLabel.swift */,
+				4AB99FFA22442B25008FD910 /* LoadingView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -469,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7305FA2243AFA600BEAB51 /* products.json in Resources */,
 				4AD64B94224398BC00380C23 /* LaunchScreen.storyboard in Resources */,
 				4A7305EF2243A33200BEAB51 /* ProductCell.xib in Resources */,
 				4AD64B91224398BC00380C23 /* Assets.xcassets in Resources */,
@@ -529,6 +528,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -538,6 +538,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -600,6 +601,7 @@
 				4A125926224408A50031A3DD /* HTTPMethod.swift in Sources */,
 				4A7305F12243A67200BEAB51 /* StringAlg.swift in Sources */,
 				4A7305E72243A13400BEAB51 /* Product.swift in Sources */,
+				4AB99FFB22442B25008FD910 /* LoadingView.swift in Sources */,
 				4A7305ED2243A2E400BEAB51 /* ProductCell.swift in Sources */,
 				4A125928224408B70031A3DD /* HTTPTask.swift in Sources */,
 				4A12592D224408F80031A3DD /* ParameterEncoding.swift in Sources */,

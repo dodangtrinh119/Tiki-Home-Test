@@ -6,6 +6,7 @@ target 'Tiki-Home-Test' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'
+  pod 'SVProgressHUD'
   # Pods for Tiki-Home-Test
 
   target 'Tiki-Home-TestTests' do
