@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FFAB510174AFAFF4E2C2A7E /* Pods_Tiki_Home_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484B04FA11B28BCB15B7CEA4 /* Pods_Tiki_Home_TestUITests.framework */; };
+		4098774F275DC0AF76DFF726 /* Pods_Tiki_Home_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F931537B47DDBA5C80C98AC0 /* Pods_Tiki_Home_TestTests.framework */; };
+		4A7305E72243A13400BEAB51 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305E62243A13400BEAB51 /* Products.swift */; };
+		4A7305ED2243A2E400BEAB51 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305EC2243A2E400BEAB51 /* ProductCell.swift */; };
+		4A7305EF2243A33200BEAB51 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7305EE2243A33200BEAB51 /* ProductCell.xib */; };
+		4A7305F12243A67200BEAB51 /* StringAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F02243A67200BEAB51 /* StringAlg.swift */; };
+		4A7305F42243A97800BEAB51 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F32243A97800BEAB51 /* String+Extension.swift */; };
+		4A7305F62243AD5100BEAB51 /* HotProductsViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F52243AD5100BEAB51 /* HotProductsViewModal.swift */; };
+		4A7305F82243ADA400BEAB51 /* HotProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */; };
+		4A7305FA2243AFA600BEAB51 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A7305F92243AFA600BEAB51 /* products.json */; };
 		4AD64B8A224398BB00380C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD64B89224398BB00380C23 /* AppDelegate.swift */; };
-		4AD64B8C224398BB00380C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD64B8B224398BB00380C23 /* ViewController.swift */; };
 		4AD64B8F224398BB00380C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B8D224398BB00380C23 /* Main.storyboard */; };
 		4AD64B91224398BC00380C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B90224398BC00380C23 /* Assets.xcassets */; };
 		4AD64B94224398BC00380C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B92224398BC00380C23 /* LaunchScreen.storyboard */; };
 		4AD64B9F224398BC00380C23 /* Tiki_Home_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD64B9E224398BC00380C23 /* Tiki_Home_TestTests.swift */; };
 		4AD64BAA224398BC00380C23 /* Tiki_Home_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD64BA9224398BC00380C23 /* Tiki_Home_TestUITests.swift */; };
+		8161AC83BC66A68C7D7FE716 /* Pods_Tiki_Home_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1526B9BE0A2BFE99334A369F /* Pods_Tiki_Home_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1526B9BE0A2BFE99334A369F /* Pods_Tiki_Home_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiki_Home_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47CDE123B124666051F8AA81 /* Pods-Tiki-Home-TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-TestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-TestUITests/Pods-Tiki-Home-TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		484B04FA11B28BCB15B7CEA4 /* Pods_Tiki_Home_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiki_Home_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7305E62243A13400BEAB51 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		4A7305EC2243A2E400BEAB51 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		4A7305EE2243A33200BEAB51 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		4A7305F02243A67200BEAB51 /* StringAlg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringAlg.swift; sourceTree = "<group>"; };
+		4A7305F32243A97800BEAB51 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4A7305F52243AD5100BEAB51 /* HotProductsViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductsViewModal.swift; sourceTree = "<group>"; };
+		4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductsViewController.swift; sourceTree = "<group>"; };
+		4A7305F92243AFA600BEAB51 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		4AD64B86224398BB00380C23 /* Tiki-Home-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiki-Home-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD64B89224398BB00380C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AD64B8B224398BB00380C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AD64B8E224398BB00380C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AD64B90224398BC00380C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AD64B93224398BC00380C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +67,12 @@
 		4AD64BA5224398BC00380C23 /* Tiki-Home-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tiki-Home-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD64BA9224398BC00380C23 /* Tiki_Home_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tiki_Home_TestUITests.swift; sourceTree = "<group>"; };
 		4AD64BAB224398BC00380C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2C054C9CA4C2C90D6AAE27 /* Pods-Tiki-Home-TestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-TestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-TestTests/Pods-Tiki-Home-TestTests.release.xcconfig"; sourceTree = "<group>"; };
+		8355F4809EEB1A470067A398 /* Pods-Tiki-Home-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-Test/Pods-Tiki-Home-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		AD34257E2CE3BDCDB8398689 /* Pods-Tiki-Home-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-Test/Pods-Tiki-Home-Test.release.xcconfig"; sourceTree = "<group>"; };
+		E923B59F340A2500358C4E05 /* Pods-Tiki-Home-TestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-TestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-TestTests/Pods-Tiki-Home-TestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EEAF4C1A8ECEF97BEBC49718 /* Pods-Tiki-Home-TestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-TestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-TestUITests/Pods-Tiki-Home-TestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F931537B47DDBA5C80C98AC0 /* Pods_Tiki_Home_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiki_Home_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8161AC83BC66A68C7D7FE716 /* Pods_Tiki_Home_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4098774F275DC0AF76DFF726 /* Pods_Tiki_Home_TestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +96,137 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFAB510174AFAFF4E2C2A7E /* Pods_Tiki_Home_TestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BDD765D1CBF6B53761796E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1526B9BE0A2BFE99334A369F /* Pods_Tiki_Home_Test.framework */,
+				F931537B47DDBA5C80C98AC0 /* Pods_Tiki_Home_TestTests.framework */,
+				484B04FA11B28BCB15B7CEA4 /* Pods_Tiki_Home_TestUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40B15259AD0F90C294938907 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8355F4809EEB1A470067A398 /* Pods-Tiki-Home-Test.debug.xcconfig */,
+				AD34257E2CE3BDCDB8398689 /* Pods-Tiki-Home-Test.release.xcconfig */,
+				E923B59F340A2500358C4E05 /* Pods-Tiki-Home-TestTests.debug.xcconfig */,
+				7E2C054C9CA4C2C90D6AAE27 /* Pods-Tiki-Home-TestTests.release.xcconfig */,
+				47CDE123B124666051F8AA81 /* Pods-Tiki-Home-TestUITests.debug.xcconfig */,
+				EEAF4C1A8ECEF97BEBC49718 /* Pods-Tiki-Home-TestUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A7305DC2243A06900BEAB51 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		4A7305DE2243A08E00BEAB51 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305E22243A0BF00BEAB51 /* MainView */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		4A7305DF2243A09300BEAB51 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305F02243A67200BEAB51 /* StringAlg.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4A7305E02243A0A400BEAB51 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4AD64B8D224398BB00380C23 /* Main.storyboard */,
+				4AD64B92224398BC00380C23 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4A7305E12243A0B000BEAB51 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305F92243AFA600BEAB51 /* products.json */,
+				4AD64B90224398BC00380C23 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4A7305E22243A0BF00BEAB51 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305E82243A22B00BEAB51 /* View */,
+				4A7305E52243A0EB00BEAB51 /* Modal */,
+				4A7305E42243A0DF00BEAB51 /* ViewModal */,
+				4A7305E32243A0D800BEAB51 /* ViewController */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		4A7305E32243A0D800BEAB51 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		4A7305E42243A0DF00BEAB51 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305F52243AD5100BEAB51 /* HotProductsViewModal.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		4A7305E52243A0EB00BEAB51 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305E62243A13400BEAB51 /* Products.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		4A7305E82243A22B00BEAB51 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305E92243A23000BEAB51 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A7305E92243A23000BEAB51 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305EC2243A2E400BEAB51 /* ProductCell.swift */,
+				4A7305EE2243A33200BEAB51 /* ProductCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4A7305F22243A95C00BEAB51 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4A7305F32243A97800BEAB51 /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4AD64B7D224398BA00380C23 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +234,8 @@
 				4AD64B9D224398BC00380C23 /* Tiki-Home-TestTests */,
 				4AD64BA8224398BC00380C23 /* Tiki-Home-TestUITests */,
 				4AD64B87224398BB00380C23 /* Products */,
+				40B15259AD0F90C294938907 /* Pods */,
+				2BDD765D1CBF6B53761796E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +252,13 @@
 		4AD64B88224398BB00380C23 /* Tiki-Home-Test */ = {
 			isa = PBXGroup;
 			children = (
+				4A7305F22243A95C00BEAB51 /* Extension */,
+				4A7305E12243A0B000BEAB51 /* Resources */,
+				4A7305E02243A0A400BEAB51 /* Storyboards */,
+				4A7305DF2243A09300BEAB51 /* Utils */,
+				4A7305DE2243A08E00BEAB51 /* Section */,
+				4A7305DC2243A06900BEAB51 /* Networking */,
 				4AD64B89224398BB00380C23 /* AppDelegate.swift */,
-				4AD64B8B224398BB00380C23 /* ViewController.swift */,
-				4AD64B8D224398BB00380C23 /* Main.storyboard */,
-				4AD64B90224398BC00380C23 /* Assets.xcassets */,
-				4AD64B92224398BC00380C23 /* LaunchScreen.storyboard */,
 				4AD64B95224398BC00380C23 /* Info.plist */,
 			);
 			path = "Tiki-Home-Test";
@@ -132,9 +289,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AD64BAE224398BC00380C23 /* Build configuration list for PBXNativeTarget "Tiki-Home-Test" */;
 			buildPhases = (
+				3D22538F83A5792208FC84AB /* [CP] Check Pods Manifest.lock */,
 				4AD64B82224398BA00380C23 /* Sources */,
 				4AD64B83224398BA00380C23 /* Frameworks */,
 				4AD64B84224398BA00380C23 /* Resources */,
+				1E115360652E375E3DF4DDBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +308,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AD64BB1224398BC00380C23 /* Build configuration list for PBXNativeTarget "Tiki-Home-TestTests" */;
 			buildPhases = (
+				D8EDE8DF97A5C2761496A79F /* [CP] Check Pods Manifest.lock */,
 				4AD64B96224398BC00380C23 /* Sources */,
 				4AD64B97224398BC00380C23 /* Frameworks */,
 				4AD64B98224398BC00380C23 /* Resources */,
@@ -167,6 +327,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AD64BB4224398BC00380C23 /* Build configuration list for PBXNativeTarget "Tiki-Home-TestUITests" */;
 			buildPhases = (
+				10BF696938052305ECE39D3A /* [CP] Check Pods Manifest.lock */,
 				4AD64BA1224398BC00380C23 /* Sources */,
 				4AD64BA2224398BC00380C23 /* Frameworks */,
 				4AD64BA3224398BC00380C23 /* Resources */,
@@ -229,7 +390,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7305FA2243AFA600BEAB51 /* products.json in Resources */,
 				4AD64B94224398BC00380C23 /* LaunchScreen.storyboard in Resources */,
+				4A7305EF2243A33200BEAB51 /* ProductCell.xib in Resources */,
 				4AD64B91224398BC00380C23 /* Assets.xcassets in Resources */,
 				4AD64B8F224398BB00380C23 /* Main.storyboard in Resources */,
 			);
@@ -251,12 +414,114 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10BF696938052305ECE39D3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiki-Home-TestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E115360652E375E3DF4DDBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tiki-Home-Test/Pods-Tiki-Home-Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tiki-Home-Test/Pods-Tiki-Home-Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D22538F83A5792208FC84AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiki-Home-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8EDE8DF97A5C2761496A79F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tiki-Home-TestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AD64B82224398BA00380C23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AD64B8C224398BB00380C23 /* ViewController.swift in Sources */,
+				4A7305F82243ADA400BEAB51 /* HotProductsViewController.swift in Sources */,
+				4A7305F12243A67200BEAB51 /* StringAlg.swift in Sources */,
+				4A7305E72243A13400BEAB51 /* Products.swift in Sources */,
+				4A7305ED2243A2E400BEAB51 /* ProductCell.swift in Sources */,
+				4A7305F62243AD5100BEAB51 /* HotProductsViewModal.swift in Sources */,
+				4A7305F42243A97800BEAB51 /* String+Extension.swift in Sources */,
 				4AD64B8A224398BB00380C23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,9 +695,11 @@
 		};
 		4AD64BAF224398BC00380C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8355F4809EEB1A470067A398 /* Pods-Tiki-Home-Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CV63UM3QZS;
 				INFOPLIST_FILE = "Tiki-Home-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -447,9 +714,11 @@
 		};
 		4AD64BB0224398BC00380C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD34257E2CE3BDCDB8398689 /* Pods-Tiki-Home-Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CV63UM3QZS;
 				INFOPLIST_FILE = "Tiki-Home-Test/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +733,7 @@
 		};
 		4AD64BB2224398BC00380C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E923B59F340A2500358C4E05 /* Pods-Tiki-Home-TestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +754,7 @@
 		};
 		4AD64BB3224398BC00380C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E2C054C9CA4C2C90D6AAE27 /* Pods-Tiki-Home-TestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +775,7 @@
 		};
 		4AD64BB5224398BC00380C23 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47CDE123B124666051F8AA81 /* Pods-Tiki-Home-TestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +795,7 @@
 		};
 		4AD64BB6224398BC00380C23 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEAF4C1A8ECEF97BEBC49718 /* Pods-Tiki-Home-TestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
