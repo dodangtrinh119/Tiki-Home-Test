@@ -35,5 +35,21 @@ class StringAlg {
         return insertBreakLineAtMiddle(text: text, middleIndex: getMiddleIndex(text: text))
     }
     
+    static func maxWidthOfLabel(text: String) -> CGFloat {
+        let splitText = text.components(separatedBy: .newlines)
+        var maximum: CGFloat = -1
+        if splitText.count > 0 {
+            for comp in splitText {
+                let sizeOfComponent: CGSize = comp.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0)])
+
+                if (sizeOfComponent.width > maximum) {
+                    sizeOfComponent.width
+                }
+            }
+        }
+        return maximum
+    }
+    
+    
     
 }

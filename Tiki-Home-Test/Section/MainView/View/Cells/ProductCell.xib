@@ -25,9 +25,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4DH-vX-OAn">
-                        <rect key="frame" x="57" y="0.0" width="150" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="264" height="150"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="NT2-Hj-EbS"/>
                             <constraint firstAttribute="height" constant="150" id="ubO-Pf-co1"/>
                         </constraints>
                     </imageView>
@@ -35,10 +34,12 @@
             </view>
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="4DH-vX-OAn" firstAttribute="leading" secondItem="tmf-MB-SWY" secondAttribute="leading" id="EKk-oG-Be5"/>
                 <constraint firstAttribute="trailing" secondItem="aJN-O5-yyG" secondAttribute="trailing" id="LJa-16-ScI"/>
                 <constraint firstItem="4DH-vX-OAn" firstAttribute="top" secondItem="tmf-MB-SWY" secondAttribute="top" id="ZRa-UV-qvp"/>
                 <constraint firstItem="aJN-O5-yyG" firstAttribute="leading" secondItem="tmf-MB-SWY" secondAttribute="leading" id="cCG-v9-0SV"/>
                 <constraint firstItem="aJN-O5-yyG" firstAttribute="top" secondItem="4DH-vX-OAn" secondAttribute="bottom" constant="16" id="eCa-Y1-UFQ"/>
+                <constraint firstAttribute="trailing" secondItem="4DH-vX-OAn" secondAttribute="trailing" id="gbF-iF-vF6"/>
                 <constraint firstAttribute="bottom" secondItem="aJN-O5-yyG" secondAttribute="bottom" id="r1e-Uz-GF3"/>
                 <constraint firstItem="4DH-vX-OAn" firstAttribute="centerX" secondItem="tmf-MB-SWY" secondAttribute="centerX" id="xAP-q3-SDy"/>
             </constraints>
