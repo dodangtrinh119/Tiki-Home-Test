@@ -12,7 +12,6 @@ import Kingfisher
 class ProductCell: UICollectionViewCell {
 
     static let reuseIdentifier = "ProductCell"
-    @IBOutlet var subContentView: UIView!
     @IBOutlet var productImageView: UIImageView!
     @IBOutlet var productNameLabel: UILabel!
 
@@ -21,7 +20,7 @@ class ProductCell: UICollectionViewCell {
     }
 
     func setupCellWithModel(model: Products, index: Int) {
-        productNameLabel.text = model.keyword
+        productNameLabel.text = StringAlg.formatText(text: model.keyword)
         if let url = URL(string: model.icon.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
             productImageView.kf.setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.fade(0.2))],
                 progressBlock: { receivedSize, totalSize in

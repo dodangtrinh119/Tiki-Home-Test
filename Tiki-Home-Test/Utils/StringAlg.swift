@@ -12,7 +12,7 @@ import UIKit
 class StringAlg {
     
     static func getMiddleIndex(text: String) -> Int {
-        let middleWordIndex = text.count % 2
+        let middleWordIndex = text.count / 2
         for index in middleWordIndex...text.count {
             if text[index] == " " {
                 return index
@@ -25,6 +25,14 @@ class StringAlg {
         var newText = text
         newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: middleIndex))
         return newText
+    }
+    
+    static func formatText(text: String) -> String {
+        let componentString = text.components(separatedBy: .whitespaces)
+        if (componentString.count == 1) {
+            return text
+        }
+        return insertBreakLineAtMiddle(text: text, middleIndex: getMiddleIndex(text: text))
     }
     
     

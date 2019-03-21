@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class HotProductsViewController: UIViewController, UIScrollViewDelegate {
+class HotProductsViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet var collectionView: UICollectionView!
     
@@ -28,15 +28,13 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate {
         productViewModal.productDataSources.asObservable().bind(to: collectionView.rx.items(cellIdentifier: "ProductCell")) { (index, model, cell) in
             if let cell = cell as? ProductCell {
                 cell.setupCellWithModel(model: model, index: index)
-                print("Dang trinh test", index)
             }
             }.disposed(by: disposeBag)
-        
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 500, height: 200)
     }
     
     
