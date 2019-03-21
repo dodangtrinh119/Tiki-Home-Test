@@ -37,7 +37,7 @@ struct FormatTwoLine: FormatTextStrategy {
         return (componentOfText.count + 1) / 2 - 1
     }
     
-     private func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
+    private func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
         var newText = text
         let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
         if (componentOfText.count < 2) {
