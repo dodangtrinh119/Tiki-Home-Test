@@ -1,26 +1,43 @@
 //
-//  StringAlg.swift
+//  FormatTextStrategy.swift
 //  Tiki-Home-Test
 //
-//  Created by Đăng Trình on 3/21/19.
+//  Created by Đăng Trình on 3/22/19.
 //  Copyright © 2019 Dang Trinh. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class StringAlg {
+//Easy to implement more way to format text. User design pattern: Strategy
+protocol FormatTextStrategy {
     
-    static func getMiddleWordIndex(text: String) -> Int {
+    func formatText(text: String) -> String
+    
+}
+
+struct FormatText {
+    
+    let strategy: FormatTextStrategy
+    
+    func formatText(text: String) -> String {
+        return strategy.formatText(text: text)
+    }
+    
+    
+}
+
+struct FormatTwoLine: FormatTextStrategy {
+    
+    private func getMiddleWordIndex(text: String) -> Int {
         
-    let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
+        let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
         if componentOfText.count % 2 == 0 {
             return componentOfText.count / 2 - 1
         }
         return (componentOfText.count + 1) / 2 - 1
     }
     
-    static func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
+     private func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
         var newText = text
         let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
         if (componentOfText.count < 2) {
@@ -51,32 +68,12 @@ class StringAlg {
         
     }
     
-    static func formatText(text: String) -> String {
+    func formatText(text: String) -> String {
         let componentString = text.components(separatedBy: .whitespaces)
         if (componentString.count == 1) {
             return text
         }
         return insertBreakLineAtMiddle(text: text, middleIndex: getMiddleWordIndex(text: text))
     }
-    
-
-    static func maxWidthOfLabel(text: String) -> CGFloat {
-        let splitText = text.components(separatedBy: .newlines)
-        var maximum: CGFloat = -1
-        if splitText.count > 0 {
-            for comp in splitText {
-                let sizeOfComponent = comp.textWidth(font: UIFont.systemFont(ofSize: fontSize))
-                if (sizeOfComponent > maximum) {
-                    maximum = sizeOfComponent
-                }
-            }
-        }
-        else {
-            return text.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]).width
-        }
-        return maximum
-    }
-    
-    
     
 }

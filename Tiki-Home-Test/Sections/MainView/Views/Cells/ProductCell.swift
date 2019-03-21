@@ -13,7 +13,6 @@ import Kingfisher
 
 class ProductCell: UICollectionViewCell {
 
-    static let reuseIdentifier = "ProductCell"
     @IBOutlet private var productImageView: UIImageView!
     @IBOutlet private var productNameLabel: UIPaddedLabel!
     
@@ -23,8 +22,8 @@ class ProductCell: UICollectionViewCell {
         productNameLabel.layer.cornerRadius = 5
     }
 
-    func setupCellWithModel(model: Product, index: Int) {
-        productNameLabel.text = StringAlg.formatText(text: model.keyword)
+    func setupCellWithModel(model: Product, index: Int, format: FormatTextStrategy) {
+        productNameLabel.text = format.formatText(text: model.keyword)
         if (index > textColors.count - 1) {
             productNameLabel.backgroundColor = UIColor(hexString: textColors[index % textColors.count])
         }

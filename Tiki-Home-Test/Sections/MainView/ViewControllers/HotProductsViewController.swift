@@ -13,16 +13,18 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
  
     @IBOutlet private var collectionView: UICollectionView!
     private var widthOfCells: [CGFloat]?
+    fileprivate var formatter: FormatTextStrategy!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         navigationItem.title = "TIKI"
         self.collectionView.register(UINib(nibName:"ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
+        formatter = FormatTwoLine()
         setupViewModal()
     }
     
-    fileprivate let productViewModal = HotProductsViewModel(networkManager: NetworkManager())
+    fileprivate let productViewModal = HotProductsViewModel()
     fileprivate let disposeBag = DisposeBag()
     fileprivate lazy var loadingView: LoaddingView = {
         let loadingView = LoaddingView(frame: UIScreen.main.bounds)
@@ -43,7 +45,7 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
         widthOfCells = [CGFloat](repeating: 0, count: productViewModal.productDataSources.value.count)
         productViewModal.productDataSources.asObservable().bind(to: collectionView.rx.items(cellIdentifier: "ProductCell")) { (index, model, cell) in
             if let cell = cell as? ProductCell {
-                cell.setupCellWithModel(model: model, index: index)
+                cell.setupCellWithModel(model: model, index: index, format: self.formatter)
             }
             }.disposed(by: disposeBag)
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
@@ -51,7 +53,7 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let text = productViewModal.productDataSources.value[indexPath.row].keyword
-        let width = StringAlg.maxWidthOfLabel(text: StringAlg.formatText(text: text))
+        let width = formatter.formatText(text: text).maxWidthOfMultiLineText()
         if (width == -1) {
             return CGSize(width: 100, height: 200)
             

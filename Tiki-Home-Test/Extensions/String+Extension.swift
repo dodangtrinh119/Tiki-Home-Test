@@ -23,4 +23,22 @@ extension String {
         return self[index(startIndex, offsetBy: i)]
     }
     
+    func maxWidthOfMultiLineText() -> CGFloat {
+        let splitText = self.components(separatedBy: .newlines)
+        var maximum: CGFloat = -1
+        if splitText.count > 0 {
+            for comp in splitText {
+                let sizeOfComponent = comp.textWidth(font: UIFont.systemFont(ofSize: fontSize))
+                if (sizeOfComponent > maximum) {
+                    maximum = sizeOfComponent
+                }
+            }
+        }
+        else {
+            return self.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]).width
+        }
+        return maximum
+    }
+
+    
 }

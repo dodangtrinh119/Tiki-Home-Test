@@ -25,6 +25,7 @@ enum Result<String> {
 }
 
 class NetworkManager {
+    static let shared = NetworkManager()
     static let environment: NetworkEnvironment = .staging
     let router = Router<HotProductApi>()
     
