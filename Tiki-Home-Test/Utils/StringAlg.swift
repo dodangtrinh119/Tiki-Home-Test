@@ -47,6 +47,9 @@ class StringAlg {
                 }
             }
         }
+        else {
+            return text.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0)]).width
+        }
         return maximum
     }
     
