@@ -14,8 +14,8 @@ import Kingfisher
 class ProductCell: UICollectionViewCell {
 
     static let reuseIdentifier = "ProductCell"
-    @IBOutlet var productImageView: UIImageView!
-    @IBOutlet var productNameLabel: UIPaddedLabel!
+    @IBOutlet private var productImageView: UIImageView!
+    @IBOutlet private var productNameLabel: UIPaddedLabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,8 +23,14 @@ class ProductCell: UICollectionViewCell {
         productNameLabel.layer.cornerRadius = 5
     }
 
-    func setupCellWithModel(model: Products, index: Int) {
+    func setupCellWithModel(model: Product, index: Int) {
         productNameLabel.text = StringAlg.formatText(text: model.keyword)
+        if (index > textColors.count - 1) {
+            productNameLabel.backgroundColor = UIColor(hexString: textColors[index % textColors.count])
+        }
+        else {
+            productNameLabel.backgroundColor = UIColor(hexString: textColors[index])
+        }
         productNameLabel.sizeToFit()
         if let url = URL(string: model.icon.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!) {
             productImageView.kf.setImage(with: url, placeholder: nil, options: [.transition(ImageTransition.fade(0.2))],
@@ -32,7 +38,7 @@ class ProductCell: UICollectionViewCell {
                     print("\(index + 1): \(receivedSize)/\(totalSize)")
                 },
                 completionHandler: { result in
-                    print("\(index + 1): \(result.debugDescription)")
+                    print("\(index + 1): Finished")
                 })
         }
     }

@@ -11,20 +11,13 @@ import UIKit
 
 class StringAlg {
     
-    static func getMiddleIndex(text: String) -> Int {
+    static func getMiddleWordIndex(text: String) -> Int {
         
     let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
         if componentOfText.count % 2 == 0 {
             return componentOfText.count / 2 - 1
         }
         return (componentOfText.count + 1) / 2 - 1
-//        let middleWordIndex = text.count / 2
-//        for index in middleWordIndex...text.count {
-//            if text[index] == " " {
-//                return index
-//            }
-//        }
-//        return -1
     }
     
     static func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
@@ -33,7 +26,11 @@ class StringAlg {
         if (componentOfText.count < 2) {
             return text
         }
-        let middlePoint = getMiddleIndex(text: text)
+        if (componentOfText.count == 2) {
+            newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: componentOfText[0].count))
+            return newText
+        }
+        let middlePoint = getMiddleWordIndex(text: text)
         var firstParam = componentOfText[0]
         var secondParam = componentOfText[middlePoint]
         for i in 1...middlePoint {
@@ -43,7 +40,7 @@ class StringAlg {
             secondParam = secondParam + " " + componentOfText[i]
         }
         
-        if (firstParam.textWidth(font: UIFont.systemFont(ofSize: 14)) > secondParam.textWidth(font: UIFont.systemFont(ofSize: 14))) {
+        if (firstParam.textWidth(font: UIFont.systemFont(ofSize: fontSize)) > secondParam.textWidth(font: UIFont.systemFont(ofSize: fontSize))) {
             newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: firstParam.count - componentOfText[middlePoint].count - 1))
         }
         else {
@@ -59,7 +56,7 @@ class StringAlg {
         if (componentString.count == 1) {
             return text
         }
-        return insertBreakLineAtMiddle(text: text, middleIndex: getMiddleIndex(text: text))
+        return insertBreakLineAtMiddle(text: text, middleIndex: getMiddleWordIndex(text: text))
     }
     
 
@@ -68,14 +65,14 @@ class StringAlg {
         var maximum: CGFloat = -1
         if splitText.count > 0 {
             for comp in splitText {
-                let sizeOfComponent = comp.textWidth(font: UIFont.systemFont(ofSize: 14))
+                let sizeOfComponent = comp.textWidth(font: UIFont.systemFont(ofSize: fontSize))
                 if (sizeOfComponent > maximum) {
                     maximum = sizeOfComponent
                 }
             }
         }
         else {
-            return text.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0)]).width
+            return text.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)]).width
         }
         return maximum
     }

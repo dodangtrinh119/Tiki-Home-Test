@@ -11,7 +11,7 @@ import RxSwift
 
 class HotProductsViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
  
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet private var collectionView: UICollectionView!
     private var widthOfCells: [CGFloat]?
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
         setupViewModal()
     }
     
-    fileprivate let productViewModal = HotProductsViewModal()
+    fileprivate let productViewModal = HotProductsViewModel(networkManager: NetworkManager())
     fileprivate let disposeBag = DisposeBag()
     
     private func setupViewModal() {

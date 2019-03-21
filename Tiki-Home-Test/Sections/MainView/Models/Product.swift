@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Products: Codable {
+struct Product: Codable {
     
     var icon: String
     var keyword: String
