@@ -18,8 +18,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="264" height="245"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJN-O5-yyG">
-                        <rect key="frame" x="0.0" y="116" width="264" height="129"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJN-O5-yyG" customClass="UIPaddedLabel" customModule="Tiki_Home_Test" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="116" width="35.5" height="129"/>
                         <color key="backgroundColor" red="0.086274509803921567" green="0.4392156862745098" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -36,7 +36,6 @@
             <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="4DH-vX-OAn" firstAttribute="leading" secondItem="tmf-MB-SWY" secondAttribute="leading" id="EKk-oG-Be5"/>
-                <constraint firstAttribute="trailing" secondItem="aJN-O5-yyG" secondAttribute="trailing" id="LJa-16-ScI"/>
                 <constraint firstItem="4DH-vX-OAn" firstAttribute="top" secondItem="tmf-MB-SWY" secondAttribute="top" id="ZRa-UV-qvp"/>
                 <constraint firstItem="aJN-O5-yyG" firstAttribute="leading" secondItem="tmf-MB-SWY" secondAttribute="leading" id="cCG-v9-0SV"/>
                 <constraint firstItem="aJN-O5-yyG" firstAttribute="top" secondItem="4DH-vX-OAn" secondAttribute="bottom" constant="16" id="eCa-Y1-UFQ"/>
@@ -47,7 +46,7 @@
             <size key="customSize" width="264" height="245"/>
             <connections>
                 <outlet property="productImageView" destination="4DH-vX-OAn" id="GFN-gN-uTs"/>
-                <outlet property="productNameLabel" destination="aJN-O5-yyG" id="xj7-Cl-46w"/>
+                <outlet property="productNameLabel" destination="aJN-O5-yyG" id="3a7-1i-a9H"/>
             </connections>
             <point key="canvasLocation" x="-102.40000000000001" y="-54.422788605697157"/>
         </collectionViewCell>

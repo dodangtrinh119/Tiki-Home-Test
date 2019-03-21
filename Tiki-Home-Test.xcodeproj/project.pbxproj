@@ -17,6 +17,7 @@
 		4A7305F62243AD5100BEAB51 /* HotProductsViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F52243AD5100BEAB51 /* HotProductsViewModal.swift */; };
 		4A7305F82243ADA400BEAB51 /* HotProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */; };
 		4A7305FA2243AFA600BEAB51 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 4A7305F92243AFA600BEAB51 /* products.json */; };
+		4A7306372243E7CB00BEAB51 /* UIPaddedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7306362243E7CB00BEAB51 /* UIPaddedLabel.swift */; };
 		4AD64B8A224398BB00380C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD64B89224398BB00380C23 /* AppDelegate.swift */; };
 		4AD64B8F224398BB00380C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B8D224398BB00380C23 /* Main.storyboard */; };
 		4AD64B91224398BC00380C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AD64B90224398BC00380C23 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		4A7305F52243AD5100BEAB51 /* HotProductsViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductsViewModal.swift; sourceTree = "<group>"; };
 		4A7305F72243ADA400BEAB51 /* HotProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductsViewController.swift; sourceTree = "<group>"; };
 		4A7305F92243AFA600BEAB51 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		4A7306362243E7CB00BEAB51 /* UIPaddedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPaddedLabel.swift; sourceTree = "<group>"; };
 		4AD64B86224398BB00380C23 /* Tiki-Home-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tiki-Home-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD64B89224398BB00380C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AD64B8E224398BB00380C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		4A7306352243E7B100BEAB51 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				4A7306362243E7CB00BEAB51 /* UIPaddedLabel.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		4AD64B7D224398BA00380C23 = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +262,7 @@
 		4AD64B88224398BB00380C23 /* Tiki-Home-Test */ = {
 			isa = PBXGroup;
 			children = (
+				4A7306352243E7B100BEAB51 /* CustomView */,
 				4A7305F22243A95C00BEAB51 /* Extension */,
 				4A7305E12243A0B000BEAB51 /* Resources */,
 				4A7305E02243A0A400BEAB51 /* Storyboards */,
@@ -522,6 +533,7 @@
 				4A7305ED2243A2E400BEAB51 /* ProductCell.swift in Sources */,
 				4A7305F62243AD5100BEAB51 /* HotProductsViewModal.swift in Sources */,
 				4A7305F42243A97800BEAB51 /* String+Extension.swift in Sources */,
+				4A7306372243E7CB00BEAB51 /* UIPaddedLabel.swift in Sources */,
 				4AD64B8A224398BB00380C23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

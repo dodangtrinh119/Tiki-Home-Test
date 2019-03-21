@@ -10,8 +10,9 @@ import UIKit
 import RxSwift
 
 class HotProductsViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
-    
+ 
     @IBOutlet var collectionView: UICollectionView!
+    private var widthOfCells: [CGFloat]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
     
     private func setupViewModal() {
         productViewModal.requestProductDataSources()
+        widthOfCells = [CGFloat](repeating: 0, count: productViewModal.productDataSources.value.count)
         productViewModal.productDataSources.asObservable().bind(to: collectionView.rx.items(cellIdentifier: "ProductCell")) { (index, model, cell) in
             if let cell = cell as? ProductCell {
                 cell.setupCellWithModel(model: model, index: index)
@@ -38,10 +40,12 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
         let width = StringAlg.maxWidthOfLabel(text: StringAlg.formatText(text: text))
         if (width == -1) {
             return CGSize(width: 100, height: 160)
-
+            
         }
-        return CGSize(width: width, height: 160)
+        return CGSize(width: width + 14, height: 160)
+
     }
     
-    
+
 }
+
