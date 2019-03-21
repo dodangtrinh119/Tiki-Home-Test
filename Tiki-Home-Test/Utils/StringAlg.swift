@@ -43,7 +43,7 @@ class StringAlg {
                 let sizeOfComponent: CGSize = comp.size(withAttributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14.0)])
 
                 if (sizeOfComponent.width > maximum) {
-                    sizeOfComponent.width
+                    maximum = sizeOfComponent.width
                 }
             }
         }

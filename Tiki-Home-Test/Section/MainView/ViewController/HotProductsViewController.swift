@@ -34,7 +34,13 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 500, height: 200)
+        let text = productViewModal.productDataSources.value[indexPath.row].keyword
+        let width = StringAlg.maxWidthOfLabel(text: StringAlg.formatText(text: text))
+        if (width == -1) {
+            return CGSize(width: 100, height: 160)
+
+        }
+        return CGSize(width: width, height: 160)
     }
     
     
