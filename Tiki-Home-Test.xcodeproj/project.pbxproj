@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3FFAB510174AFAFF4E2C2A7E /* Pods_Tiki_Home_TestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 484B04FA11B28BCB15B7CEA4 /* Pods_Tiki_Home_TestUITests.framework */; };
 		4098774F275DC0AF76DFF726 /* Pods_Tiki_Home_TestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F931537B47DDBA5C80C98AC0 /* Pods_Tiki_Home_TestTests.framework */; };
+		4A016E922248838200DABB91 /* inputStringTest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A016E912248838200DABB91 /* inputStringTest.txt */; };
+		4A016E94224883A800DABB91 /* outputStringTestExpected.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4A016E93224883A800DABB91 /* outputStringTestExpected.txt */; };
 		4A12591F224407700031A3DD /* HotProductEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A12591E224407700031A3DD /* HotProductEndPoint.swift */; };
 		4A125922224408660031A3DD /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A125921224408660031A3DD /* EndPointType.swift */; };
 		4A1259242244087D0031A3DD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1259232244087D0031A3DD /* Router.swift */; };
@@ -60,6 +62,8 @@
 		1526B9BE0A2BFE99334A369F /* Pods_Tiki_Home_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiki_Home_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47CDE123B124666051F8AA81 /* Pods-Tiki-Home-TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tiki-Home-TestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tiki-Home-TestUITests/Pods-Tiki-Home-TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		484B04FA11B28BCB15B7CEA4 /* Pods_Tiki_Home_TestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tiki_Home_TestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A016E912248838200DABB91 /* inputStringTest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputStringTest.txt; sourceTree = "<group>"; };
+		4A016E93224883A800DABB91 /* outputStringTestExpected.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = outputStringTestExpected.txt; sourceTree = "<group>"; };
 		4A12591E224407700031A3DD /* HotProductEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProductEndPoint.swift; sourceTree = "<group>"; };
 		4A125921224408660031A3DD /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		4A1259232244087D0031A3DD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 		4AD64B9D224398BC00380C23 /* Tiki-Home-TestTests */ = {
 			isa = PBXGroup;
 			children = (
+				4A016E912248838200DABB91 /* inputStringTest.txt */,
+				4A016E93224883A800DABB91 /* outputStringTestExpected.txt */,
 				4AD64B9E224398BC00380C23 /* Tiki_Home_TestTests.swift */,
 				4AD64BA0224398BC00380C23 /* Info.plist */,
 			);
@@ -480,6 +486,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A016E94224883A800DABB91 /* outputStringTestExpected.txt in Resources */,
+				4A016E922248838200DABB91 /* inputStringTest.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,5 +30,30 @@ class Tiki_Home_TestTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    func testFormatText() {
+        let formatter = FormatTwoLine()
+        var inputTexts: [String]?
+        var outputTexts: [String]?
+        
+        do {
+            let testBundle = Bundle(for: type(of: self))
+            if let path = testBundle.path(forResource: "inputStringTest", ofType: "txt") {
+                let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
+                inputTexts = data.components(separatedBy: "!@")
+            }
+            
+            if let path = testBundle.path(forResource: "outputStringTestExpected", ofType: "txt") {
+                let data = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
+                outputTexts = data.components(separatedBy: "!@")
+            }
+            if (inputTexts != nil && outputTexts != nil) {
+                for i in 0...(inputTexts?.count)! - 1 {
+                    XCTAssertEqual(formatter.formatText(text: inputTexts![i]), outputTexts![i])
+                }
+            }
+        } catch {
+            print("Error when read file")
+        }
+    }
 
 }

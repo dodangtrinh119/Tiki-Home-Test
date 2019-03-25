@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class UIPaddedLabel: UILabel {
+class UIPaddedLabel: UILabel {
     
     @IBInspectable var topInset: CGFloat = 5.0
     

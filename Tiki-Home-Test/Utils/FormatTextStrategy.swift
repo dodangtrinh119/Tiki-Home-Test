@@ -23,49 +23,37 @@ struct FormatText {
         return strategy.formatText(text: text)
     }
     
-    
 }
 
 struct FormatTwoLine: FormatTextStrategy {
     
-    private func getMiddleWordIndex(text: String) -> Int {
+    private func getMiddleIndexToRight(text: String) -> Int {
         
-        let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
-        if componentOfText.count % 2 == 0 {
-            return componentOfText.count / 2 - 1
+        for index in (text.count/2)...text.count - 1 {
+            if text[index] == " " {
+                return index
+            }
         }
-        return (componentOfText.count + 1) / 2 - 1
+        return -1
+        
     }
     
-    private func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
+    private func getMiddleIndexToLeft(text: String) -> Int {
+        
+        for index in stride(from: text.count/2, to: 0, by: -1) {
+            if text[index] == " " {
+                return index
+            }
+        }
+        return -1
+        
+    }
+    
+    func insertBreakLineAtMiddle(text: String, middleIndex: Int) -> String {
         var newText = text
-        let componentOfText = text.components(separatedBy: .whitespacesAndNewlines)
-        if (componentOfText.count < 2) {
-            return text
-        }
-        if (componentOfText.count == 2) {
-            newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: componentOfText[0].count))
-            return newText
-        }
-        let middlePoint = getMiddleWordIndex(text: text)
-        var firstParam = componentOfText[0]
-        var secondParam = componentOfText[middlePoint]
-        for i in 1...middlePoint {
-            firstParam = firstParam + " " + componentOfText[i]
-        }
-        for i in middlePoint + 1...componentOfText.count - 1 {
-            secondParam = secondParam + " " + componentOfText[i]
-        }
-        
-        if (firstParam.textWidth(font: UIFont.systemFont(ofSize: fontSize)) > secondParam.textWidth(font: UIFont.systemFont(ofSize: fontSize))) {
-            newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: firstParam.count - componentOfText[middlePoint].count - 1))
-        }
-        else {
-            newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: firstParam.count))
-        }
-        
+        newText.insert("\n", at: newText.index(newText.startIndex, offsetBy: middleIndex))
+        newText = newText.replacingOccurrences(of: "\n ", with: "\n", options: .literal, range: nil)
         return newText
-        
     }
     
     func formatText(text: String) -> String {
@@ -73,7 +61,20 @@ struct FormatTwoLine: FormatTextStrategy {
         if (componentString.count == 1) {
             return text
         }
-        return insertBreakLineAtMiddle(text: text, middleIndex: getMiddleWordIndex(text: text))
+        let middleFormLeft = getMiddleIndexToLeft(text: text)
+        let middleFromRight = getMiddleIndexToRight(text: text)
+        if (middleFormLeft == -1) {
+            return insertBreakLineAtMiddle(text: text, middleIndex: middleFromRight)
+        }
+        else if (middleFromRight == -1) {
+            return insertBreakLineAtMiddle(text: text, middleIndex: middleFormLeft)
+        }
+        let firstParam = insertBreakLineAtMiddle(text: text, middleIndex: middleFormLeft)
+        let secondParam = insertBreakLineAtMiddle(text: text, middleIndex: middleFromRight)
+        if (firstParam.textWidth(font: UIFont.systemFont(ofSize: fontSize)) < secondParam.textWidth(font: UIFont.systemFont(ofSize: fontSize))) {
+            return firstParam
+        }
+        return secondParam
     }
     
 }

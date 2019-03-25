@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "HotProductsViewController.collectionView(_:layout:sizeForItemAt:):HotProductsViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "widthOfCells">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ProductCell.setupCellWithModel(model:index:):ProductCell.swift">
          <PersistentStrings>
             <PersistentString
@@ -23,15 +31,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "HotProductsViewController.collectionView(_:layout:sizeForItemAt:):HotProductsViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "widthOfCells">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "static StringAlg.maxWidthOfLabel(text:):StringAlg.swift">
       </ContextState>
       <ContextState
-         contextName = "static StringAlg.maxWidthOfLabel(text:):StringAlg.swift">
+         contextName = "Tiki_Home_TestTests.testFormatText():Tiki_Home_TestTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "outputTexts![i]">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>
