@@ -12,7 +12,6 @@ import RxSwift
 class HotProductsViewController: UIViewController, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
  
     @IBOutlet private var collectionView: UICollectionView!
-    private var widthOfCells: [CGFloat]?
     fileprivate var formatter: FormatTextStrategy!
     
     override func viewDidLoad() {
@@ -21,10 +20,10 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
         navigationItem.title = "TIKI"
         self.collectionView.register(UINib(nibName:"ProductCell", bundle: nil), forCellWithReuseIdentifier: "ProductCell")
         formatter = FormatTwoLine()
-        setupViewModal()
+        setupViewModel()
     }
     
-    fileprivate let productViewModal = HotProductsViewModel()
+    fileprivate let productViewModel = HotProductsViewModel()
     fileprivate let disposeBag = DisposeBag()
     fileprivate lazy var loadingView: LoaddingView = {
         let loadingView = LoaddingView(frame: UIScreen.main.bounds)
@@ -34,16 +33,15 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
         return loadingView
     }()
     
-    private func setupViewModal() {
+    private func setupViewModel() {
         // --- For loading animation ---
-        productViewModal.isLoadingAnimation.subscribe(onNext: { [weak self] (isLoading) in
+        productViewModel.isLoadingAnimation.subscribe(onNext: { [weak self] (isLoading) in
             if isLoading { self?.loadingView.startLoadding() }
             else {  self?.loadingView.stopLoadding() }
         }).disposed(by: disposeBag)
         
-        productViewModal.requestProductDataSources()
-        widthOfCells = [CGFloat](repeating: 0, count: productViewModal.productDataSources.value.count)
-        productViewModal.productDataSources.asObservable().bind(to: collectionView.rx.items(cellIdentifier: "ProductCell")) { (index, model, cell) in
+        productViewModel.requestProductDataSources()
+        productViewModel.productDataSources.asObservable().bind(to: collectionView.rx.items(cellIdentifier: "ProductCell")) { (index, model, cell) in
             if let cell = cell as? ProductCell {
                 cell.setupCellWithModel(model: model, index: index, format: self.formatter)
             }
@@ -52,7 +50,7 @@ class HotProductsViewController: UIViewController, UIScrollViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let text = productViewModal.productDataSources.value[indexPath.row].keyword
+        let text = productViewModel.productDataSources.value[indexPath.row].keyword
         let width = formatter.formatText(text: text).maxWidthOfMultiLineText()
         if (width == -1) {
             return CGSize(width: 100, height: 200)
