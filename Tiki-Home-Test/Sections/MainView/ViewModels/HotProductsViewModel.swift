@@ -19,7 +19,8 @@ class HotProductsViewModel {
 
     func requestProductDataSources() {
         isLoadingAnimation.onNext(true)
-        NetworkManager.shared.getHotProducts() { products, error in
+        NetworkManager.shared.getHotProducts() {[weak self] products, error in
+            guard let self = self else { return }
             self.productDataSources.accept(products!)
             self.isLoadingAnimation.onNext(false)
         }
